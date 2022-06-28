@@ -1,0 +1,60 @@
+.light-blue-background{
+  background:#38B6FF;
+}
+.title{
+  font-size:50px;
+  margin-top:2.5%;
+  margin-left:10%;
+  font-family: "Goldman";
+  color:white;
+}
+.goldman {
+    font-family: "Goldman";
+}
+.sequence_display{
+  font-size:25px;
+  color:white;
+  text-align:left;
+  margin-left:5%;
+  font-family: "Goldman";
+}
+.sequence_answer{
+  font-size:40px;
+  color:white;
+  border-top:2px solid white;
+  text-align: center;
+  padding-top:5%;
+  font-family: "Goldman";
+}
+.sequence_button{
+  background:none;
+  border:2px solid white;
+  color:white;
+  font-family: "Goldman";
+  margin-top:5%;
+}
+.sequence_button:hover{
+  background:white;
+  color:black;
+}
+.width-100{
+  width:100%;
+}
+.white{
+  color:white;
+}
+.number_box{
+  border:2px solid white;
+  border-radius:10px;
+  padding:5%;
+}
+.sequence_form{
+  margin-top:5%;
+  background:#38B6FF;
+  border-color:white;
+
+}
+
+.margin-top-5{
+  margin-top:5%;
+}
