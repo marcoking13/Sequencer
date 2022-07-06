@@ -17,6 +17,28 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-1"></div>
+            <div class='col-10'>
+                <div class="row">
+                    <div class="col-3">
+                        <div style="border:2px solid #38B6FF; text-align:center; background:white; color:black">Find Nth Term</div>
+                    </div>
+                    <div class="col-3">
+                        <div style="border:2px solid white; text-align:center; background:#38B6FF; color:white">Feature Coming Soon</div>
+                    </div>
+                    <div class="col-3">
+                        <div style="border:2px solid white; text-align:center; background:#38B6FF; color:white">Feature Coming Soon</div>
+                    </div>
+                    <div class="col-3">
+                        <div style="border:2px solid white; text-align:center; background:#38B6FF; color:white">Feature Coming Soon</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row " style="margin-top:5%">
             <div class="col-3"></div>
 
             <div class="col-6 jumbotron number_box">
@@ -32,15 +54,17 @@
          <div class="row margin-top-5">
             <form>
                 <div class="form-group sequence_form_group">
-                    <input class="number_input white goldman width-100 form-control sequence_form"placeholder="Enter Numbers (Must seperate with space)"/>
-                    <input class="white difference_input goldman width-100 form-control sequence_form"placeholder ="Common Differnce(Only first term of sequence will be applied)"/>
-                    <input class="white term_input goldman width-100 form-control sequence_form"placeholder ="Enter Nth Term to Find"/>
+                    <input class="number_input white goldman width-100 form-control sequence_form"value =9 placeholder="Enter First Number"/>
+                    <input class="white difference_input goldman width-100 form-control sequence_form"value = 9 placeholder ="Common Difference(Only first term of sequence will be applied)"/>
+                    <input class="white symbol_input goldman width-100 form-control sequence_form"value = "**"placeholder ="Common Difference Sign (*,+,**,/,-)"/>
+                    <input class="white term_input goldman width-100 form-control sequence_form"value = 9 placeholder ="Enter Nth Term to Find"/>
                     <button type = "submit" class="width-100 btn sequence_button">Submit</button>
                 </div>
             </form>
           </div>
           </div>
           </div>
+              <p class="sequence_answer white goldman"style="margin-top:5%">Does not calculate squared sequences</p>
         </div>
         <script src="./app.js"></script>
   </body>

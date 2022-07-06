@@ -1,4 +1,6 @@
 var numberInput = document.querySelector(".number_input");
+var symbolInput = document.querySelector(".symbol_input");
+
 var sequenceDisplay = document.querySelector(".sequence_display");
 var sequenceAnswer = document.querySelector(".sequence_answer");
 
@@ -11,27 +13,11 @@ var sequenceButton = document.querySelector(".sequence_button");
 var numbers = [];
 
 
-
-const CommonDifference = (numbers)=> {
-  var initalDifference = parseInt(numbers[1]) - parseInt(numbers[0]);
-  var currentDifference;
-  for (var i = 0; i < numbers.length; i++){
-    if(i >= numbers.length - 1){
-    return currentDifference;
-    break;
-    }
-   currentDifference = parseInt(numbers[i + 1]) - parseInt(numbers[i]);
-   console.log(currentDifference);
-    if(currentDifference != initalDifference){
-      return null;
-      break;
-
-    }
-
-  }
-  console.log(currentDifference);
-
-
+const GetCommonDifferenceResults = (firstTerm,commonDifferenceValue,symbol) =>{
+  console.log(symbol);
+  console.log(firstTerm,commonDifferenceValue,symbol);
+  var result = eval(firstTerm + symbol + commonDifferenceValue);
+  return result;
 }
 
 const LoopNumbers = (numbers) => {
@@ -52,32 +38,25 @@ const LoopNumbers = (numbers) => {
 const Submit = (e)=>{
 
   e.preventDefault();
-  var numbers = numberInput.value.split(" ");
   var nthTerm = parseInt(termInput.value);
-  var firstTerm = parseInt(numbers[0]);
-  var commonDifference;
-  if(differenceInput.value == ""){
-   commonDifference = CommonDifference(numbers);
-  }else{
-    commonDifference =parseInt( differenceInput.value);
-  }
-  if(!commonDifference){
-    sequenceDisplay.innerText = "No Match";
-    sequenceAnswer.innerText = "N/A"
-    return;
-  }
-
-  var answer = firstTerm + (nthTerm - 1) * commonDifference;
-  console.log(answer);
+  var firstTerm = parseInt(numberInput.value);
+  var commonDifferenceValue = parseInt(differenceInput.value);
+  var symbol = symbolInput.value;
+  var commonDifferenceResultsValue = GetCommonDifferenceResults(firstTerm,commonDifferenceValue,symbol);
+  var answer = firstTerm + (nthTerm - 1) * commonDifferenceResultsValue;
 
   var answerArr = [firstTerm];
 
   for(var i = 0; i <= nthTerm; i ++){
-      answerArr.push(answerArr[i] + commonDifference);
+
+    var commonDifferenceResultsValue = GetCommonDifferenceResults(answerArr[i],commonDifferenceValue,symbol);
+    answerArr.push(commonDifferenceResultsValue);
   }
 
   DisplayNumbers(answerArr);
+
   sequenceAnswer.innerText = nthTerm.toString() +"nth Term: "+ answerArr[nthTerm - 1];
+
 }
 
 sequenceForm.addEventListener('submit', (e)=>{Submit(e)});
