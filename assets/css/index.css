@@ -8,12 +8,25 @@
   font-family: "Goldman";
   color:white;
 }
+.mt-5{
+  margin-top:5%;
+}
+.active{
+  background:#C9E265 !important;
+  color:black !important;
+  font-weight:bold;
+  border:1px solid white !important;
+}
 .goldman {
     font-family: "Goldman";
 }
+.term_catagory{
+  border:2px solid #38B6FF; text-align:center; background:white; color:black
+}
 .sequence_display{
-  font-size:25px;
+  font-size:20px;
   color:white;
+  width:100%;
   text-align:left;
   margin-left:5%;
   font-family: "Goldman";
